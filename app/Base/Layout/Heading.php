@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Actions\Layout;
+namespace App\Base\Layout;
 
 use Illuminate\Contracts\Support\Htmlable;
 use Illuminate\Support\HtmlString;

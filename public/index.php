@@ -2,7 +2,7 @@
 
 require __DIR__ . '/../bootstrap/app.php';
 
-use App\Actions\Variables\StringActions;
+use App\Base\Variables\StringActions;
 
 $first = 'Hello';
 $second = 'Hello';
@@ -20,14 +20,14 @@ if (StringActions::isEqual($first, $second)) {
 <html lang="nl">
 
 <head>
-    <?= \App\Actions\Layout\Heading::getHeading() ?>
-    <?= \App\Actions\Layout\Heading::additionalScripts() ?>
-    <?= \App\Actions\Layout\Heading::additionalCss() ?>
+    <?= \App\Base\Layout\Heading::getHeading() ?>
+    <?= \App\Base\Layout\Heading::additionalScripts() ?>
+    <?= \App\Base\Layout\Heading::additionalCss() ?>
 </head>
 
 <body>
 
-    <?= \App\Actions\Layout\Heading::extraImports(false) ?>
+    <?= \App\Base\Layout\Heading::extraImports(false) ?>
 </body>
 
 </html>

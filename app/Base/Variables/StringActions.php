@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Actions\Variables;
+namespace App\Base\Variables;
 
 class StringActions
 {
