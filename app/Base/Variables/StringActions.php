@@ -9,7 +9,7 @@ class StringActions
         return (new static())->check($first, $second);
     }
 
-    protected function check(string $first, string $second): string
+    protected function check(string $first, string $second): bool
     {
         return $first === $second;
     }
