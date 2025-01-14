@@ -8,7 +8,7 @@
         ]
     },
     "require": {
-        "cebe/markdown": "~1.2.0",
+        "php": "^8.4",
         "spatie/laravel-ignition": "^2.9",
         "illuminate/collections": "^11.38",
         "illuminate/conditionable": "^11.38",
