@@ -2,8 +2,9 @@
 
 namespace App\Base\Layout;
 
-use Illuminate\Contracts\Support\Htmlable;
+use Illuminate\Support\Str;
 use Illuminate\Support\HtmlString;
+use Illuminate\Contracts\Support\Htmlable;
 
 class Heading
 {
@@ -34,14 +35,19 @@ class Heading
     public static function additionalScripts(): Htmlable
     {
         return new HtmlString(<<<HTML
-            <script src="/build/js/app.js"></script>
+            <script src="/build/js/app.js?<?php echo self::disableCachePraram(); ?>"></script>
             HTML);
     }
 
     public static function additionalCss(): Htmlable
     {
         return new HtmlString(<<<HTML
-            <link rel="stylesheet" href="/build/css/app.css">
+            <link rel="stylesheet" href="/build/css/app.css?<?php echo self::disableCachePraram(); ?>">
             HTML);
+    }
+
+    public static function disableCachePraram()
+    {
+        return Str::random(10);
     }
 }
