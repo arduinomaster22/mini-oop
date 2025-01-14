@@ -7,7 +7,7 @@ use App\Base\Variables\StringActions;
 $first = 'Hello';
 $second = 'Hello';
 
-$value = null;
+$value = '';
 
 if (StringActions::isEqual($first, $second)) {
     $value = 'Strings are equal';
