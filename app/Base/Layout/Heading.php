@@ -27,22 +27,27 @@ class Heading
             HTML);
         } else {
             return new HtmlString(<<<HTML
-            <!-- Add imports like css and jvascript here that you like to have at the end of the <bpdy> tag -->
+            <!-- Add imports like css and jvascript here that you like to have at the end of the <body> tag -->
+
             HTML);
         }
     }
 
     public static function additionalScripts(): Htmlable
     {
+        $disableCachePraram = static::disableCachePraram();
+
         return new HtmlString(<<<HTML
-            <script src="/build/js/app.js?<?php echo self::disableCachePraram(); ?>"></script>
+            <script src="/build/js/app.js?$disableCachePraram"></script>
             HTML);
     }
 
     public static function additionalCss(): Htmlable
     {
+        $disableCachePraram = static::disableCachePraram();
+
         return new HtmlString(<<<HTML
-            <link rel="stylesheet" href="/build/css/app.css?<?php echo self::disableCachePraram(); ?>">
+            <link rel="stylesheet" href="/build/css/app.css?$disableCachePraram>">
             HTML);
     }
 
