@@ -2,12 +2,15 @@
 
 use Spatie\Ignition\Ignition;
 
-require __DIR__ . '/../vendor/autoload.php';
+require __DIR__.'/../vendor/autoload.php';
 
 Ignition::make()
-    ->applicationPath(__DIR__ . '/../')
+    ->applicationPath(__DIR__.'/../')
     ->shouldDisplayException(true)
     ->setEditor('vscode')
     ->theme('dark')
     ->runningInProductionEnvironment(false)
     ->register();
+
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__.'/../');
+$dotenv->load();

@@ -1,7 +1,8 @@
 <?php
 
-require __DIR__ . '/../bootstrap/app.php';
+require __DIR__.'/../bootstrap/app.php';
 
+use App\Base\Connections\Database\Builder;
 use App\Base\Variables\StringActions;
 
 $first = 'Hello';
@@ -13,6 +14,16 @@ if (StringActions::isEqual($first, $second)) {
     $value = 'Strings are equal';
 } else {
     $value = 'Strings are not equal';
+}
+
+$output = new Builder;
+
+$output->table('users');
+
+$data = $output->where('gpg_version', 'gpg');
+
+if ($data) {
+    dd($data);
 }
 
 ?>

@@ -14,6 +14,7 @@
         "illuminate/conditionable": "^11.38",
         "illuminate/macroable": "^11.38",
         "illuminate/pipeline": "^11.38",
-        "illuminate/support": "^11.38"
+        "illuminate/support": "^11.38",
+        "vlucas/phpdotenv": "^5.6"
     }
 }

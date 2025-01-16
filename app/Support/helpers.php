@@ -2,5 +2,5 @@
 
 function testFunction1()
 {
-    return "Test Function 1";
+    return 'Test Function 1';
 }
